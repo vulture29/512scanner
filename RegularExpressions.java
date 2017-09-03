@@ -67,7 +67,7 @@ public class RegularExpressions {
 		if(isLetter(ch)) {
 			for(int i = 1; i < str.length(); i++) {
 				ch = str.charAt(i);
-				if(!isDigit(ch) && !isLetter(ch)) {
+				if(!isDigit(ch) && !isLetter(ch) && ch != '_') {
 					// this is not a number or letter
 					return false;
 				}
