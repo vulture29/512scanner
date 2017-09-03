@@ -52,7 +52,7 @@ public class RegularExpressions {
 	 * @return boolean indicating if it is a leter
 	 */
 	private boolean isLetter(char c) {
-		return ((c >= 'a' && c <= 'z') || (c >= "A" && c <= 'Z'));
+		return ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'));
 	}
 
 	/**
@@ -67,7 +67,7 @@ public class RegularExpressions {
 		if(isLetter(ch)) {
 			for(int i = 1; i < str.length(); i++) {
 				ch = str.charAt(i);
-				if(!isDigit(ch) && isLetter(ch)) {
+				if(!isDigit(ch) && !isLetter(ch)) {
 					// this is not a number or letter
 					return false;
 				}
