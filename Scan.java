@@ -100,7 +100,7 @@ public class Scan {
 			currentToken = token.getToken(characters);
 			if(currentToken == TokenNames.None) {
 				// we have reached the end of the line and found no tokens so throw an error
-				System.err.println("Invalid input Not a valid token: " + characters);
+				System.err.println("The input program contains errors for scanning.");
 				System.exit(1);
 			}
 			// if we found a token
