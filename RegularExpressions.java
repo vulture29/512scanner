@@ -45,7 +45,16 @@ public class RegularExpressions {
 	private boolean isDigit(char c) {
 		return (c >= '0' && c <= '9');
 	}
-	
+
+	/***
+	 * Checks to see if a character is a letter
+	 * @param c the character to check 
+	 * @return boolean indicating if it is a leter
+	 */
+	private boolean isLetter(char c) {
+		return ((c >= 'a' && c <= 'z') || (c >= "A" && c <= 'Z'));
+	}
+
 	/**
 	 * Checks to see if the given input matches the pattern for an identifier.
 	 * The pattern is: Letter(Letter|digit)*
@@ -54,11 +63,18 @@ public class RegularExpressions {
 	 */
 	public boolean isIdentifier(String str) {		
 		// TODO: Implement the recognition of identifiers 
-	
-
-
-
-
+		char ch = str.charAt(0);
+		if(isLetter(ch)) {
+			for(int i = 1; i < str.length(); i++) {
+				ch = str.charAt(i);
+				if(!isDigit(ch) && isLetter(ch)) {
+					// this is not a number or letter
+					return false;
+				}
+			}
+			return true;
+		}
+		return false;
 	}
 
 
