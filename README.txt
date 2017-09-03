@@ -1,7 +1,6 @@
 ReadME
 by Danny Reinheimer 
 
-
 Compile Instructions:
 To compiler the scanner run the following java command 
 javac Pair.java RegularExpressions.java Scan.java Scanner.java Token.java TokenNames.java
